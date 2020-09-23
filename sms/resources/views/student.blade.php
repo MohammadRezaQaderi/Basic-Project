@@ -8,18 +8,125 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-    <title>ُStudent management System</title>
+    <title>Student management System</title>
   </head>
   <body>
-    @if ($layout == 'index')
+    @if($layout == 'index')
         <div class="container-fluid">
-            <section></section>
-            <section></section>
+            <div class="row">
+                <section class="col">
+                    @include('studentslist')
+                </section>
+                <section class="col">
+                    <form>
+                        <div class="form">
+                            <label >First Name</label>
+                            <input name="firstName" type="text" class="form-control" placeholder="Enter Yor First Name">
+                        </div>
+                        <div class="form">
+                            <label >Last Name</label>
+                            <input name="firstName" type="text" class="form-control" placeholder="Enter Yor Last Name">
+                        </div>
+                        <div class="form">
+                            <label >Age</label>
+                            <input name="firstName" type="text" class="form-control" placeholder="Enter Yor Age">
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">Email address</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">Password</label>
+                          <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="form-group form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </form>
+                </section>
+            </div>
         </div>
-    @elesif($layout == 'create')
-    @elesif($layout == 'show')
-    @elesif($layout == 'edit')
-
+    @elseif($layout == 'create')
+        <div class="container-fluid">
+            <div class="row">
+                <section class="col">
+                    @include('studentslist')
+                </section>
+                <section class="col">
+                    <form>
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">Email address</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">Password</label>
+                          <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="form-group form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </form>
+                </section>
+            </div>
+        </div>
+    @elseif($layout == 'show')
+        <div class="container-fluid">
+            <div class="row">
+                <section class="col">
+                    @include('studentslist')
+                </section>
+                <section class="col">
+                    <form>
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">Email address</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">Password</label>
+                          <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="form-group form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </form>
+                </section>
+            </div>
+        </div>
+    @elseif($layout == 'edit')
+        <div class="container-fluid">
+            <div class="row">
+                <section class="col">
+                    @include('studentslist')
+                </section>
+                <section class="col">
+                    <form>
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">Email address</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">Password</label>
+                          <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="form-group form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </form>
+                </section>
+            </div>
+        </div>
     @endif
 
     <!-- Optional JavaScript -->
