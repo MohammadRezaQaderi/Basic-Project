@@ -5,6 +5,7 @@
         <th scope="col">Last name</th>
         <th scope="col">Age</th>
         <th scope="col">Email</th>
+        <th scope="col">Password</th>
     </tr>
     </thead>
     <tbody>

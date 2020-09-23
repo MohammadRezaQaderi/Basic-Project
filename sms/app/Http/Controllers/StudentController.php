@@ -41,6 +41,8 @@ class StudentController extends Controller
         $student -> firstName = $request->input('firstName'); 
         $student -> secondName = $request->input('secondName'); 
         $student -> age = $request->input('age');
+        $student -> email = $request->input('email');
+        $student -> password = $request->input('password');
         $student->save(); 
         return redirect('/');
     }
@@ -84,6 +86,8 @@ class StudentController extends Controller
         $student -> firstName = $request->input('firstName'); 
         $student -> secondName = $request->input('secondName'); 
         $student -> age = $request->input('age');
+        $student -> email = $request->input('email');
+        $student -> password = $request->input('password');
         $student->save(); 
         return redirect('/');
     }

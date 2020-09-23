@@ -18,6 +18,8 @@ class CreateStudentsTable extends Migration
             $table->string('firstName');
             $table->string('secondName');
             $table->integer('age');
+            $table->string('email');
+            $table->string('password');
             $table->timestamps();
         });
     }
