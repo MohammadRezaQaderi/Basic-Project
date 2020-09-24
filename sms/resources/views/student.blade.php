@@ -77,6 +77,30 @@
                     @include('studentslist')
                 </section>
                 <section class="col">
+                  <form action="{{url('/update/ '.$student->id)}}" method="POST">
+                    @csrf
+                        <div class="form">
+                            <label >First Name</label>
+                        <input value="{{$student->firstName}}" name="firstName" type="text" class="form-control" placeholder="Enter Your First Name">
+                        </div>
+                        <div class="form">
+                            <label >Last Name</label>
+                            <input value="{{$student->secondName}}" name="secondName" type="text" class="form-control" placeholder="Enter Your Last Name">
+                        </div>
+                        <div class="form">
+                            <label >Age</label>
+                            <input value="{{$student->age}}" name="age" type="text" class="form-control" placeholder="Enter Your Age">
+                        </div>
+                        <div class="form-group">
+                          <label >Email address</label>
+                          <input value="{{$student->email}}" name="email" type="email" class="form-control" placeholder="Enter Your Email">
+                        </div>
+                        <div class="form-group">
+                          <label >Password</label>
+                          <input value="{{$student->password}}"  name="password" type="password" class="form-control" >
+                        </div>
+                        <button type="submit" class="btn btn-primary">Update</button>
+                      </form>
                 </section>
             </div>
         </div>

@@ -24,6 +24,6 @@ Route::get('/edit/{id}' ,'App\Http\Controllers\StudentController@edit');
 Route::get('/show/{id}' ,'App\Http\Controllers\StudentController@show');
 Route::get('/create' ,'App\Http\Controllers\StudentController@create');
 Route::post('/store' ,'App\Http\Controllers\StudentController@store');
-Route::get('/update/{id}' ,'App\Http\Controllers\StudentController@update');
-Route::get('/login' , 'App\Http\Controllers\StudentController@login');
+Route::post('/update/ {id}' ,'App\Http\Controllers\StudentController@update');
+Route::post('/login' , 'App\Http\Controllers\StudentController@login');
 
