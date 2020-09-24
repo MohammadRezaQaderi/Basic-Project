@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Student;
-
+use Validator;
+use Auth;
 class StudentController extends Controller
 {
     /**
@@ -106,7 +107,8 @@ class StudentController extends Controller
     }
 
     public function login(){
-        
-        return view('login');
+        $students = Student::all();
+        return view('login' , ['students'=>$students , 'layout'=>'login']);
+
     }
 }

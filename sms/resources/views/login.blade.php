@@ -1,21 +1,24 @@
+
 <form action="/" class="login">
     <header>Login</header>
-    <div class="field"><span class="fa fa-user"></span><input type="text" placeholder="Email or User Name"></div>
-    <div class="field"><span class="fa fa-lock"></span><input type="password" placeholder="Password"></div>
+  @csrf
+    <div>
+    <div class="field"><span class="fa fa-user"></span><input name="email" type="text" placeholder="Email "></div>
+    <div class="field"><span class="fa fa-lock"></span><input name="password" type="password" placeholder="Password"></div>
+    @foreach ($students as $student)
+      @if ($student->email == 'email')
+         @if ($student->password == 'password')
+              <h1>allaho akbar</h1>
+         @endif
+      @endif
+    @endforeach
+  </div>
     <div class="forgot-password"><a href="/">Forgot password?</a></div>
-    <input type="submit" class="submit" value="LOGIN"></input>
-    <span class="login-form-copy">Or login with</span>
-    <div class="social-icons">
-      <div class="social-icon facebook"><span class="fa fa-facebook"></span></div>
-      <div class="social-icon instagram"><span class="fa fa-instagram"></span></div>
-      <div class="social-icon twitter"><span class="fa fa-twitter"></span></div>
-      <div class="social-icon google"><span class="fa fa-google"></span></div>
-      <div class="social-icon linkedin"><span class="fa fa-linkedin"></span></div>
-    </div>
+    <input type="submit" class="submit" value="LOGIN">
   <span class="logn-form-copy">Don't have an account? <a href="/" class="login-form__sign-up">Sign up</a></span>
 </form>
 <style>
-    @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Poppins:400,500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Poppins:400,500&display=swap');
 
 * {
   margin: 0;
