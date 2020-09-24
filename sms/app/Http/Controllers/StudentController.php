@@ -104,4 +104,8 @@ class StudentController extends Controller
         $student->delete();
         return redirect('/');
     }
+
+    public function login(){
+        return view('login');
+    }
 }
