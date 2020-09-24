@@ -21,7 +21,7 @@
 </div>
 
     @if($layout == 'index')
-        <div class="container-fluid mt-4">
+        <div class="container-fluid mt-4" style="text-align: center; margin-left:auto; margin-right:auto">
             <div class="row">
                 <section class="col-md-7">
                     @include('studentslist')

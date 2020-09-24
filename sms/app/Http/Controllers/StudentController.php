@@ -103,7 +103,7 @@ class StudentController extends Controller
     {
         $student = Student::findOrFail($id);
         $student->delete();
-        return redirect('/');
+        return view('/delete/'.$student->$id);
     }
 
     public function login(){

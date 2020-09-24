@@ -9,8 +9,6 @@
                 <th scope="col">First name</th>
                 <th scope="col">Last name</th>
                 <th scope="col">Age</th>
-                <th scope="col">Email</th>
-                <th scope="col">Password</th>
             </tr>
             </thead>
             <tbody>
@@ -21,6 +19,8 @@
                     <td>{{$student -> age}}</td>
                     <td>
                         <a href="{{url('/edit/'.$student->id )}}" class="btn btn-sm btn-warning">Edit</a>
+                        <a href="{{url('/delete/'.$student->id )}}" class="btn btn-sm btn-warning">Delete</a>
+
                     </td>
                 </tr>
             @endforeach
