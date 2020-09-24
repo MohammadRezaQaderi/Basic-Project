@@ -11,25 +11,34 @@
     <title>Student management System</title>
   </head>
   <body>
+
+    @include('navbar')
+
+
+
     @if($layout == 'index')
-        <div class="container-fluid">
+        <div class="container-fluid mt-4">
             <div class="row">
-                <section class="col">
+                <section class="col-md-7">
                     @include('studentslist')
                 </section>
-                <section class="col">
+                <section class="col-md-5">
                 </section>
             </div>
         </div>
     @elseif($layout == 'create')
-        <div class="container-fluid">
+        <div class="container-fluid mt-4">
             <div class="row">
                 <section class="col">
                     @include('studentslist')
                 </section>
                 <section class="col">
-                  <form action="{{url('/store')}}" method="POST">
-                    @csrf
+                <div class="card mb-3">
+                  <img src="https://cdn3.vectorstock.com/i/1000x1000/28/92/cute-school-girl-cartoon-vector-21572892.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Enter Your Information</h5>
+                      <form action="{{url('/store')}}" method="POST">
+                        @csrf
                         <div class="form">
                             <label >First Name</label>
                             <input name="firstName" type="text" class="form-control" placeholder="Enter Your First Name">
@@ -56,11 +65,13 @@
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                       </form>
-                </section>
+                  </div>
+                </div>
+              </section>               
             </div>
         </div>
     @elseif($layout == 'show')
-        <div class="container-fluid">
+        <div class="container-fluid mt-4">
             <div class="row">
                 <section class="col">
                     @include('studentslist')
@@ -71,12 +82,12 @@
             </div>
         </div>
     @elseif($layout == 'edit')
-        <div class="container-fluid">
+        <div class="container-fluid mt-4">
             <div class="row">
-                <section class="col">
+                <section class="col-md-7">
                     @include('studentslist')
                 </section>
-                <section class="col">
+                <section class="col-md-5">
                   <form action="{{url('/update/ '.$student->id)}}" method="POST">
                     @csrf
                         <div class="form">
